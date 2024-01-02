@@ -1,11 +1,17 @@
 ---
 layout: default
-modal-id: 6
-date: 2014-07-15
-img: submarine.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
+modal-id: 1
+date: 2023-01-02
+img: onsitik.png
+alt: onsitik-image
+project-date: March 2023
+client: Onsitik
 category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: At the heart of my journey as a web developer is the challenge of creating the Onsitik website. A balanced fusion of creativity and functionality, the site stands out for its modern aesthetic and intuitive user experience.
+
+The design, from the fluid navigation to the responsiveness on all devices, guarantees a captivating journey. The persuasive content and captivating visual elements convey Onsitik's message clearly and convincingly.
+
+With seamless integration with social media, the website is not just an online presence; it's a strategic tool that reinforces the brand, attracts new customers and highlights Onsitik's expertise in digital marketing.
+
+To explore the website is to dive into the essence of Onsitik, where innovation meets effectiveness and vision becomes reality.
 ---
