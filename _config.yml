@@ -1,11 +1,11 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+title: Diogo Gomes
+email: diogoafg7@gmail.com
+url: https://github.com/Diogoafg7
+description: "Olá, eu sou o Diogo, estudante de engenharia informática na FEUP. Apaixonado por tecnologia e empreendedorismo, concilio os estudos com freelancing em marketing digital. Pronto a contribuir para projectos inovadores!"
+keywords: "C++,Python,Java,Html,CSS,JavaScript,PHP,SQL"
+skills: "Web Developer - Graphic Artist - App Developer"
+meta_author: Gomes Diogo
 
 # Google webmaster tools
 google_verify:
