@@ -35,6 +35,7 @@ footer:
   copyright: Diogo Gomes
   location: Location
   social: Around the Web
+  credits: Information
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -51,6 +52,9 @@ social:
 address:
   - line: Matosinhos
   - line: Porto, Portugal
+
+# Credits content
+credits: 'More Information on <a href="http://onsitik.com">Onsitik</a>.'
 
 # Build settings
 markdown: kramdown
