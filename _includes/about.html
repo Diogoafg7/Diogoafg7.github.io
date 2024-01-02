@@ -8,19 +8,22 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-lg-offset-2">
-        <p>Olá, eu sou o Diogo, estudante de engenharia informática na FEUP. Apaixonado por tecnologia e empreendedorismo, concilio os estudos com freelancing em marketing digital. Pronto a contribuir para projectos inovadores!</p>
-      <div class="footer-col col-md-4">
+      <div class="col-lg-6">
+        <p>Olá, eu sou o Diogo, estudante de engenharia informática na FEUP. Apaixonado por tecnologia e empreendedorismo, concilio os estudos com freelancing em marketing digital. Estou sempre pronto a contribuir para projetos inovadores!</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="footer-col">
           <h3>{{ site.footer.social }}</h3>
           <ul class="list-inline">
             {% for network in site.social %}
-            <li>
+            <li class="list-inline-item">
               <a href="{{ network.url }}" class="btn-social btn-outline"><i
                   class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
             </li>
             {% endfor %}
           </ul>
         </div>
+      </div>
     </div>
   </div>
 </section>
