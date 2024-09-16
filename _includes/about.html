@@ -3,21 +3,25 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2>About</h2>
+        <h2>Sobre Mim</h2>
         <hr class="star-light">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <p>Hello, I'm Diogo, a computer engineering student at FEUP. Passionate about technology and entrepreneurship, I combine my studies with freelancing in digital marketing. I'm always ready to contribute to innovative projects!</p>      </div>
+        <p>Olá, sou o Diogo, recém-licenciado em Engenharia Informática pela Faculdade de Engenharia da Universidade do Porto. Sou apaixonado por tecnologia e tenho uma forte inclinação para o empreendedorismo. A minha formação permitiu-me desenvolver uma compreensão sólida de sistemas informáticos e desenvolvimento de software, e estou sempre à procura de novas oportunidades para aplicar este conhecimento em projetos inovadores.</p>
+        <p>Além do meu interesse pela informática, estou profundamente envolvido no mundo do marketing digital. Acredito que a combinação de tecnologia e criatividade pode levar a soluções impactantes e eficazes. Estou constantemente a explorar novas formas de trazer valor através das minhas iniciativas e projetos.</p>
+        <p>Estou aberto a colaborações e novos desafios. Se tens uma ideia ou projeto em mente, fico à disposição para conversar e explorar como podemos trabalhar juntos.</p>
+      </div>
       <div class="col-lg-6 text-center">
         <div class="footer-col">
-          <h3>{{ site.footer.social }}</h3>
+          <h3>Conecta-te comigo</h3>
           <ul class="list-inline">
             {% for network in site.social %}
             <li class="list-inline-item">
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+              <a href="{{ network.url }}" class="btn-social btn-outline" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-fw fa-{{ network.title }}"></i>
+              </a>
             </li>
             {% endfor %}
           </ul>

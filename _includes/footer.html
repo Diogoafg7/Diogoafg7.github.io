@@ -2,29 +2,28 @@
 <footer class="text-center">
   <div class="footer-above">
     <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.location }}</h3>
+      <div class="row justify-content-center">
+        <!-- Localização -->
+        <div class="footer-col col-md-4 text-center">
+          <h3>Localização</h3>
           <p>
-            {% for adress in site.address %}
-            {{ adress.line }} <br>
+            {% for address in site.address %}
+            {{ address.line }} <br>
             {% endfor %}
           </p>
         </div>
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.social }}</h3>
+        <!-- Redes Sociais -->
+        <div class="footer-col col-md-4 text-center">
+          <h3>Redes Sociais</h3>
           <ul class="list-inline">
             {% for network in site.social %}
-            <li>
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+            <li class="list-inline-item">
+              <a href="{{ network.url }}" class="btn-social btn-outline" target="_blank" rel="noopener noreferrer" aria-label="{{ network.title }}">
+                <i class="fa-brands fa-fw fa-{{ network.title }}"></i>
+              </a>
             </li>
             {% endfor %}
           </ul>
-        </div>
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.credits }}</h3>
-          <p>{{ site.credits }}</p>
         </div>
       </div>
     </div>
@@ -32,17 +31,22 @@
   <div class="footer-below">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
+        <div class="col-lg-12 text-center">
+          <p>&copy; {{ site.footer.copyright }} {{ site.time | date: '%Y' }}</p>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visible-sm">
-  <a class="btn btn-primary" href="#page-top">
+<!-- Scroll to Top Button -->
+<div class="scroll-top page-scroll">
+  <a class="btn btn-primary" href="#page-top" aria-label="Scroll to top">
     <i class="fa fa-chevron-up"></i>
   </a>
 </div>
+
+<!-- Optional JavaScript for better page load -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-oP6Uyj26sY4Rk4Beu3jK3U94v0xnQob2rT5Uww3JUmKP0Fd5Q6CkL7Rk0S+7XfDq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9B1pVv3Fs+h/4vJ/4L5y06p6ckF5l2r6z7UzL5h4Z6eR2D3ihsH4" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-w1QzQTO0MLH/5LMN1n1+f5iL1B3gjg8zV06A8sj2eI5tTXt4UAB1XQ9d8XX8/VF5" crossorigin="anonymous"></script>

@@ -1,12 +1,11 @@
-<!-- Portfolio Modals -->
+<!-- Modais do Portfólio -->
 {% for post in site.posts %}
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
-        <div class="rl">
-        </div>
+        <div class="rl"></div>
       </div>
     </div>
     <div class="container">
@@ -15,29 +14,58 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+            
+            <!-- Carousel de imagens -->
+            <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                {% for image in post.gallery %}
+                <div class="item {% if forloop.first %}active{% endif %}">
+                  <a href="img/portfolio/{{ image.img }}" data-lightbox="gallery-{{ post.modal-id }}" data-title="{{ image.alt }}">
+                    <img src="img/portfolio/{{ image.img }}" class="img-responsive img-centered" alt="{{ image.alt }}">
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
+
+              <!-- Controles do Carousel -->
+              <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+
+            <!-- Descrição -->
             {% if post.description %}
             <p>{{ post.description }}</p>
             {% endif %}
+            
+            <!-- Detalhes do projeto -->
             <ul class="list-inline item-details">
               {% if post.client %}
-              <li>Client:
+              <li>Cliente:
                 <strong>{{ post.client }}</strong>
               </li>
               {% endif %}
               {% if post.project-date %}
-              <li>Date:
+              <li>Data:
                 <strong>{{ post.project-date }}</strong>
               </li>
               {% endif %}
               {% if post.category %}
-              <li>Service:
+              <li>Serviço:
                 <strong>{{ post.category }}</strong>
               </li>
               {% endif %}
             </ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+            
+            <!-- Botão de fechar -->
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fa fa-times"></i> Fechar
+            </button>
           </div>
         </div>
       </div>
