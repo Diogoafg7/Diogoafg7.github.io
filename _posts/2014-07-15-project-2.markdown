@@ -1,11 +1,22 @@
 ---
 layout: default
 modal-id: 2
-date: 2014-07-15
-img: game.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
+date: 2024-09-15
+img: gizbar.png
+alt: gizbar-website
+project-date: September 2024
+client: Giz Bar
 category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: |
+  No desenvolvimento do site do Giz Bar, um icônico bar e pool pub em Leça da Palmeira, o foco foi criar uma plataforma digital que captasse a essência vibrante e descontraída do espaço. O design do website transmite uma estética moderna e convidativa, com elementos que refletem a atmosfera acolhedora do bar. A navegação intuitiva e o layout responsivo garantem uma excelente experiência, tanto para desktop quanto dispositivos móveis.
+
+  Informações sobre o menu de bebidas, competições de bilhar e reservas online são apresentadas de forma clara e fácil de acessar, reforçando o compromisso do Giz Bar com seus clientes. Além disso, uma galeria de fotos dinâmica permite aos usuários explorarem a energia do local, dando vida à experiência digital.
+  
+  O resultado é um website que não só eleva a presença digital do Giz Bar, mas também conecta novos clientes e mantém os habituais engajados com novidades e eventos.
+
+gallery:
+  - img: gizbar.pt_.png
+    alt: Home Page
+  - img: gizbar.pt_menu_.png
+    alt: Menu Page
 ---
