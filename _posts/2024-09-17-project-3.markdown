@@ -1,0 +1,24 @@
+---
+layout: default
+modal-id: 3
+date: 2024-09-17
+img: NextGeN-logo.png
+alt: nefishexample-logo
+project-date: September 2024
+client: NEFish Pesca
+category: Web Development
+description: |
+  O **NEFish Pesca** é um website dedicado à marca portuguesa NEFish, especializada em produtos e equipamentos de pesca. O objetivo principal deste projeto foi criar uma plataforma digital que reflete a paixão e a expertise da marca no mundo da pesca.
+
+  O design do site é moderno e funcional, oferecendo uma experiência de navegação intuitiva tanto para entusiastas da pesca quanto para profissionais. Com uma estrutura clara e um layout responsivo, o **NEFish Pesca** proporciona aos visitantes uma visão completa dos produtos, serviços e novidades do setor.
+
+  O site inclui seções detalhadas sobre os produtos disponíveis, artigos de blog sobre técnicas e dicas de pesca, e uma área dedicada ao contato com a marca. A integração com redes sociais e um sistema de busca eficiente garantem que os usuários possam encontrar rapidamente as informações que procuram.
+
+  Explore o website da NEFish Pesca em: [NEFish Pesca](https://nefish.com.pt/)
+
+gallery:
+  - img: NextGeN-homepage.png
+    alt: NEFish Home Page
+  - img: NextGeN-singleProduct.png
+    alt: Produtos NEFish
+---
