@@ -1,0 +1,22 @@
+---
+layout: default
+modal-id: 1
+date: 2024-09-17
+img: talenthive.png
+alt: talent-hive-webapp
+project-date: September 2024
+client: Talent Hive
+category: Web App Development
+description: |
+  O **Talent Hive** é uma plataforma web inovadora, projetada para conectar artistas independentes e amadores com estabelecimentos locais, como cafés, restaurantes, bares e discotecas. Inspirado no modelo do Fiverr, o Talent Hive permite que artistas criem perfis e divulguem seus talentos, enquanto donos de negócios podem encontrar rapidamente o artista ideal para seus eventos ou necessidades específicas.
+
+  A plataforma destaca-se pela simplicidade de uso, tanto para os artistas quanto para os empresários. Através de um sistema de busca otimizado e perfis detalhados, o **Talent Hive** facilita a contratação de músicos, DJs, comediantes, e outros tipos de artistas, de forma rápida e eficaz.
+
+  Além disso, a interface é moderna e responsiva, permitindo que usuários naveguem facilmente por dispositivos móveis ou desktop. Este projeto representa um avanço na forma como os artistas locais e estabelecimentos interagem, criando uma rede de oportunidades e valorizando a cena cultural local.
+
+  Explore mais sobre a plataforma em: [Talent Hive](https://talent-hive.vercel.app/)
+
+gallery:
+  - img: talenthive.png
+    alt: Talent Hive Logo
+---
