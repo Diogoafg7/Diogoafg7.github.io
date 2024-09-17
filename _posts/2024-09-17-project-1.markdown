@@ -16,6 +16,7 @@ description: |
 
   Explore mais sobre a plataforma em: [Talent Hive](https://talent-hive.vercel.app/)
 
+url: https://talent-hive.vercel.app/
 gallery:
   - img: talenthive.png
     alt: Talent Hive Logo

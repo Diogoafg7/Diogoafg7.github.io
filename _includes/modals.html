@@ -13,8 +13,14 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
+
+            <!-- Link para o site após o título -->
+            {% if post.url %}
+            <p><a href="{{ post.url }}" target="_blank">{{ post.url }}</a></p>
+            {% endif %}
+
             <hr class="star-primary">
-            
+
             <!-- Carousel de imagens -->
             <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
