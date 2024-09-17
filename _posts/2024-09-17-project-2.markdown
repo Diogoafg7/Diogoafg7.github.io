@@ -2,8 +2,8 @@
 layout: default
 modal-id: 2
 date: 2024-09-15
-img: gizbar.png
-alt: gizbar-website
+img: gizbar.jpg
+alt: gizbar-logo
 project-date: September 2024
 client: Giz Bar
 category: Web Development
