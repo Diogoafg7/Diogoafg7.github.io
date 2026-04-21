@@ -252,7 +252,7 @@ ul, ol {
 .hero__photo {
   width: 260px;
   height: 260px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
   border: 2px solid rgba(56, 189, 248, 0.3);
 }
@@ -589,7 +589,7 @@ ul, ol {
 .about__photo {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
   border: 2px solid var(--color-border-light);
 }
