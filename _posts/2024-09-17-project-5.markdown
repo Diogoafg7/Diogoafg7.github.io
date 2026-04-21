@@ -1,12 +1,12 @@
 ---
 layout: default
 modal-id: 5
-date: 2024-09-14
+date: 2026-03-01
 img: faber.png
 alt: faber-website
-project-date: 2024
+project-date: 2026
 client: Faber
-category: Client Website · Frontend
+category: Client Website · Fullstack
 description: |
   **Faber** is a website built for a real client, focused on presenting the brand and its services professionally online.
 

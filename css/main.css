@@ -117,7 +117,9 @@ ul, ol {
 }
 
 .nav--scrolled {
-  background: var(--color-nav-solid);
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow: 0 1px 0 var(--color-border-dark);
 }
 
@@ -180,17 +182,8 @@ ul, ol {
 }
 
 /* ============================================================
-   HERO
+   HERO — base layout (effects defined in VISUAL EFFECTS block below)
    ============================================================ */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: var(--color-bg-dark);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
 .hero__bg-pattern {
   position: absolute;
   inset: 0;
@@ -221,10 +214,10 @@ ul, ol {
   margin-bottom: var(--space-3);
 }
 
+/* .hero__name size/layout — visual effects + animation in VISUAL EFFECTS block below */
 .hero__name {
   font-size: var(--text-hero);
   font-weight: var(--weight-bold);
-  color: var(--color-text-primary);
   letter-spacing: -0.03em;
   line-height: var(--leading-tight);
   margin-bottom: var(--space-4);
@@ -458,12 +451,9 @@ ul, ol {
   border-radius: 8px;
   overflow: hidden;
   background: var(--color-bg-white);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease,
+              opacity 0.65s ease;
+  will-change: transform;
 }
 
 .card__image-wrap {
@@ -852,5 +842,287 @@ ul, ol {
 
   .portfolio__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 200;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s linear;
+}
+
+/* ============================================================
+   CURSOR SPOTLIGHT
+   ============================================================ */
+#cursor-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s;
+  will-change: transform;
+}
+
+/* ============================================================
+   HERO — ANIMATED ORBS + GRADIENT TEXT
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--color-bg-dark);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Drifting orbs via CSS custom properties set by JS */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.45;
+  transition: transform 0.1s linear;
+}
+
+.hero::before {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.5), rgba(34, 211, 238, 0.2));
+  left: var(--orb1-x, 40%);
+  top:  var(--orb1-y, 30%);
+  transform: translate(-50%, -50%);
+}
+
+.hero::after {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.45), rgba(168, 85, 247, 0.15));
+  left: var(--orb2-x, 70%);
+  top:  var(--orb2-y, 60%);
+  transform: translate(-50%, -50%);
+}
+
+/* Third orb via a child div in the bg-pattern element */
+.hero__bg-pattern::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent 70%);
+  left: var(--orb3-x, 20%);
+  top:  var(--orb3-y, 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Gradient text + entrance animation on name */
+.hero__name {
+  background: linear-gradient(135deg, #f1f5f9 0%, #38bdf8 50%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: fadeSlideUp 0.8s ease both, gradient-shift 6s ease infinite;
+  animation-delay: 0.25s, 0s;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glitch effect on name hover */
+.hero__name.glitch {
+  animation: glitch 0.4s steps(2) forwards;
+}
+
+@keyframes glitch {
+  0%  { text-shadow: 2px 0 #38bdf8, -2px 0 #a855f7; clip-path: inset(0 0 80% 0); }
+  20% { text-shadow: -3px 0 #22d3ee, 3px 0 #6366f1; clip-path: inset(20% 0 40% 0); transform: translate(-2px); }
+  40% { text-shadow: 3px 0 #38bdf8, -3px 0 #a855f7;  clip-path: inset(50% 0 20% 0); transform: translate(2px); }
+  60% { text-shadow: -2px 0 #22d3ee, 2px 0 #6366f1; clip-path: inset(10% 0 60% 0); transform: translate(-1px); }
+  80% { text-shadow: 2px 0 #38bdf8, -2px 0 #a855f7;  clip-path: inset(70% 0 5% 0); transform: translate(1px); }
+  100%{ text-shadow: none; clip-path: none; transform: none; }
+}
+
+/* Typewriter cursor blink */
+.hero__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--color-accent);
+  font-weight: var(--weight-regular);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal,
+.card,
+.timeline__item,
+.skills__group,
+.section-title {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.revealed,
+.card.revealed,
+.timeline__item.revealed,
+.skills__group.revealed,
+.section-title.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   HERO ENTRANCE ANIMATION
+   ============================================================ */
+.hero__eyebrow {
+  animation: fadeSlideUp 0.7s ease both;
+  animation-delay: 0.1s;
+}
+
+.hero__role {
+  animation: fadeSlideUp 0.7s ease both;
+  animation-delay: 0.4s;
+}
+
+.hero__tagline {
+  animation: fadeSlideUp 0.7s ease both;
+  animation-delay: 0.55s;
+}
+
+.hero__ctas {
+  animation: fadeSlideUp 0.7s ease both;
+  animation-delay: 0.7s;
+}
+
+.hero__photo {
+  animation: fadeSlideIn 1s ease both;
+  animation-delay: 0.3s;
+  will-change: transform;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ============================================================
+   SECTION TITLE — animated underline on reveal
+   ============================================================ */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  margin-top: var(--space-3);
+  border-radius: 2px;
+  transition: width 0.6s ease 0.3s;
+}
+
+.section-title.revealed::after {
+  width: 36px;
+}
+
+/* ============================================================
+   SKILLS — glow on tag hover
+   ============================================================ */
+.tag {
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.tag:hover {
+  background: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   EXPERIENCE TIMELINE — left line glow on hover
+   ============================================================ */
+.timeline__item:hover {
+  border-left-color: var(--color-accent);
+}
+
+/* ============================================================
+   CARDS — shimmer border on hover
+   ============================================================ */
+.card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.1), 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+/* ============================================================
+   CONTACT SECTION — glow on email
+   ============================================================ */
+.contact__email {
+  position: relative;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.contact__email:hover {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  color: var(--color-text-primary);
+}
+
+/* ============================================================
+   ABOUT PHOTO — subtle glow ring
+   ============================================================ */
+.about__photo {
+  transition: box-shadow 0.3s ease;
+}
+
+.about__photo:hover {
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.3), 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+/* ============================================================
+   REDUCE MOTION — accessibility
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal, .card, .timeline__item, .skills__group, .section-title {
+    opacity: 1;
+    transform: none;
   }
 }

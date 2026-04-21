@@ -6,7 +6,7 @@ img: gomespichelaria.png
 alt: gomes-pichelaria-website
 project-date: 2024
 client: Gomes Pichelaria
-category: Client Website · Frontend
+category: Client Website · Fullstack
 description: |
   **Gomes Pichelaria** is a website built for a local plumbing business in Portugal. A real client project designed to establish the company's online presence and make it easy for customers to get in touch.
 
