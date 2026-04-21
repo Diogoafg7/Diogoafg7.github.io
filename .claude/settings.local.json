@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:diogoafg7.github.io)"
+      "WebFetch(domain:diogoafg7.github.io)",
+      "Bash(grep -v \"^d.*\\\\\\\\.git\")"
     ]
   }
 }

@@ -1,0 +1,19 @@
+---
+layout: default
+modal-id: 5
+date: 2024-09-14
+img: faber.png
+alt: faber-website
+project-date: 2024
+client: Faber
+category: Client Website · Frontend
+description: |
+  **Faber** is a website built for a real client, focused on presenting the brand and its services professionally online.
+
+  Built with a clean, responsive layout designed for both desktop and mobile users, with clear navigation and an effective call-to-action structure.
+
+url_live: https://faber.pt/
+gallery:
+  - img: faber.png
+    alt: Faber Homepage
+---

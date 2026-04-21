@@ -1,25 +1,30 @@
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-  <div class="container portfolio-flex-grid">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Portfolio</h2>
-        <hr class="star-primary">
-      </div>
-    </div>
-    <div class="portfolio-flex-row">
+<section class="portfolio" id="portfolio">
+  <div class="section-inner">
+    <h2 class="section-title">Projects</h2>
+    <div class="portfolio__grid">
       {% for post in site.posts %}
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
+      <article class="card">
+        <a class="card__image-link" href="{{ post.url_live }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card__image-wrap">
+            <img class="card__image" src="{{ '/img/portfolio/' | append: post.img | relative_url }}" alt="{{ post.alt }}" width="600" height="400" loading="lazy">
+            <div class="card__overlay" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
           </div>
-          <!-- Definir tamanho padrão da imagem -->
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="width: 600px; height: 400px; object-fit: cover;">
         </a>
-      </div>
+        <div class="card__body">
+          <h3 class="card__title">
+            <a href="{{ post.url_live }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a>
+          </h3>
+          <p class="card__category">{{ post.category }}</p>
+          {% if post.description %}
+          <p class="card__description">{{ post.description | markdownify | strip_html | truncate: 130 }}</p>
+          {% endif %}
+          <a class="card__cta" href="{{ post.url_live }}" target="_blank" rel="noopener noreferrer">
+            View project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
       {% endfor %}
     </div>
   </div>

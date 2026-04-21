@@ -1,52 +1,18 @@
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Contacto</h2>
-        <hr class="star-primary">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <form action="https://formspree.io/f/xvoeorbw" method="POST" name="sentMessage" id="contactForm" novalidate>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label for="name">Nome</label>
-              <input type="text" name="name" class="form-control" placeholder="Nome" id="name" required
-                data-validation-required-message="Introduza o seu nome.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label for="email">Email</label>
-              <input type="email" name="_replyto" class="form-control" placeholder="Email" id="email" required
-                data-validation-required-message="Introduza o seu e-mail.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div>
-            <input type="hidden" name="_subject" value="Nova Submissão!">
-            <input type="text" name="_gotcha" style="display:none" />
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label for="message">Mensagem</label>
-              <textarea rows="5" name="message" class="form-control" placeholder="Mensagem" id="message" required
-                data-validation-required-message="Introduza a sua mensagem."></textarea>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <div class="row">
-            <div class="form-group col-xs-12">
-              <button type="submit" class="btn btn-success btn-lg">Enviar</button>
-            </div>
-          </div>
-        </form>
-      </div>
+<section class="contact" id="contact">
+  <div class="section-inner section-inner--narrow">
+    <h2 class="section-title section-title--light">Get in touch</h2>
+    <p class="contact__lead">I'm open to backend engineering roles and interesting projects. The best way to reach me is directly by email.</p>
+    <a class="contact__email" href="mailto:{{ site.email }}">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      {{ site.email }}
+    </a>
+    <div class="contact__social">
+      {% for network in site.social %}
+      <a class="contact__social-link" href="{{ network.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ network.title | capitalize }}">
+        <i class="fa-brands fa-{{ network.title }}" aria-hidden="true"></i>
+        <span>{{ network.title | capitalize }}</span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>

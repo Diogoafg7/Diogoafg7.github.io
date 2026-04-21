@@ -1,0 +1,19 @@
+---
+layout: default
+modal-id: 4
+date: 2024-09-16
+img: gomespichelaria.png
+alt: gomes-pichelaria-website
+project-date: 2024
+client: Gomes Pichelaria
+category: Client Website · Frontend
+description: |
+  **Gomes Pichelaria** is a website built for a local plumbing business in Portugal. A real client project designed to establish the company's online presence and make it easy for customers to get in touch.
+
+  The site presents the company's services clearly, includes contact information, and is built with a responsive layout that works across mobile and desktop.
+
+url_live: https://gomespichelaria.pt/
+gallery:
+  - img: gomespichelaria.png
+    alt: Gomes Pichelaria Homepage
+---

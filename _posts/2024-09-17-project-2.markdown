@@ -16,7 +16,7 @@ description: |
 
   Live: [gizbar.pt](https://gizbar.pt/)
 
-url: https://gizbar.pt/
+url_live: https://gizbar.pt/
 gallery:
   - img: gizbar.pt_.png
     alt: Home Page
