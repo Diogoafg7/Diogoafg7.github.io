@@ -6,15 +6,15 @@ img: gizbar.jpg
 alt: gizbar-logo
 project-date: September 2024
 client: Giz Bar
-category: Web Development
+category: Client Website · Frontend
 description: |
-  No desenvolvimento do site do Giz Bar, um icônico bar e pool pub em Leça da Palmeira, o foco foi criar uma plataforma digital que captasse a essência vibrante e descontraída do espaço. O design do website transmite uma estética moderna e convidativa, com elementos que refletem a atmosfera acolhedora do bar. A navegação intuitiva e o layout responsivo garantem uma excelente experiência, tanto para desktop quanto dispositivos móveis.
+  **Giz Bar** is a website built for a bar and pool pub in Leça da Palmeira, Portugal. A real client project delivered for a live business.
 
-  Informações sobre o menu de bebidas, competições de bilhar e reservas online são apresentadas de forma clara e fácil de acessar, reforçando o compromisso do Giz Bar com seus clientes. Além disso, uma galeria de fotos dinâmica permite aos usuários explorarem a energia do local, dando vida à experiência digital.
-  
-  O resultado é um website que não só eleva a presença digital do Giz Bar, mas também conecta novos clientes e mantém os habituais engajados com novidades e eventos.
+  The site includes a drinks menu, online reservation functionality, a dynamic photo gallery, and billiards event information — designed to be fast to navigate and easy to maintain.
 
-  Explore mais sobre o Giz Bar em: [Giz Bar](https://gizbar.pt/)
+  Built with a responsive layout optimised for both mobile and desktop users.
+
+  Live: [gizbar.pt](https://gizbar.pt/)
 
 url: https://gizbar.pt/
 gallery:
