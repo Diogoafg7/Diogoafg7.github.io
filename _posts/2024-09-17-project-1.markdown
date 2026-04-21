@@ -7,7 +7,7 @@ img: talenthive.png
 alt: talent-hive-webapp
 project-date: September 2024
 client: Talent Hive
-category: Web App · Next.js · Fullstack
+category: Web App · Next.js · Full Stack
 description: |
   **Talent Hive** is a marketplace platform connecting independent artists with local venues — musicians, DJs, and performers on one side, bars and event spaces on the other.
 

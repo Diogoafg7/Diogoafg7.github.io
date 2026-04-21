@@ -126,10 +126,10 @@
   if (!el) return;
 
   const phrases = [
-    'Fullstack Developer · C# / .NET · REST APIs',
+    'Full Stack Developer · C# / .NET · REST APIs',
     'Building APIs that work.',
     'C# · .NET · SQL · Angular',
-    'Fullstack Developer · Porto, Portugal'
+    'Full Stack Developer · Porto, Portugal'
   ];
 
   let phraseIndex = 0;
