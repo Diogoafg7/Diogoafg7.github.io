@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Gomes Pichelaria
 modal-id: 4
 date: 2024-09-16
 img: gomespichelaria.png

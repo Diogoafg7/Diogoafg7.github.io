@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Giz Bar
 modal-id: 2
 date: 2024-09-15
 img: gizbar.jpg
